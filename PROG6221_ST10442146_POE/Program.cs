@@ -25,6 +25,10 @@ namespace PROG6221_ST10442146
             // ASCII Art Header
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(@"
+    
+╔══════════════════════════════════════╗
+║    CYBERSECURITY AWARENESS BOT       ║
+╚══════════════════════════════════════╝
 
              .--------.
             / .------. \
@@ -56,6 +60,10 @@ namespace PROG6221_ST10442146
             }
 
             Console.WriteLine($"\nWelcome, {name}! I'm here to help you stay safe online.\n");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine(new string('═', Console.WindowWidth));
+            Console.ResetColor();
+
 
             // Main Chat Loop
             bool active = true;
@@ -98,6 +106,9 @@ namespace PROG6221_ST10442146
                         PrintBot("Avoid suspicious links, use HTTPS websites, and keep your software up to date.");
                         break;
                     case "exit":
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine(new string('═', Console.WindowWidth));
+                        Console.ResetColor();
                         PrintBot($"Goodbye, {name}! Stay safe out there.");
                         active = false;
                         break;
