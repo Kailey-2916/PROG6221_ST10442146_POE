@@ -16,7 +16,7 @@ namespace PROG6221_ST10442146
             }
             catch (Exception ex)
             {
-
+                // If the audio file is not found or cannot be played, that message will be shown
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("⚠️ Unable to play greeting audio: " + ex.Message);
                 Console.ResetColor();
@@ -59,6 +59,7 @@ namespace PROG6221_ST10442146
                 name = Console.ReadLine();
             }
 
+            // adds a line to separate the greeting from the rest of the program
             Console.WriteLine($"\nWelcome, {name}! I'm here to help you stay safe online.\n");
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(new string('═', Console.WindowWidth));
@@ -106,6 +107,7 @@ namespace PROG6221_ST10442146
                         PrintBot("Avoid suspicious links, use HTTPS websites, and keep your software up to date.");
                         break;
                     case "exit":
+                        //Makes a horizontal line to separate the goodbye message from the rest of the program
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine(new string('═', Console.WindowWidth));
                         Console.ResetColor();
@@ -124,6 +126,7 @@ namespace PROG6221_ST10442146
 
         static void PrintBot(string message)
         {
+            // Helper method to format chatbot responses, makes the bot's text appear as if it is typing
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Write("Bot: ");
             foreach (char c in message)
